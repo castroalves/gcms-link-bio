@@ -1,12 +1,18 @@
 import Head from 'next/head'
 import { GraphQLClient } from "graphql-request";
-import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import Link from '../components/Link';
 
 export async function getServerSideProps() {
+
+  require("dotenv").config();
+
   const graphcms = new GraphQLClient(
-    "https://api-eu-central-1.graphcms.com/v2/cksngadri196901yu6tif7asr/master"
+    process.env.GRAPHCMS_ENDPOINT, {
+      headers: {
+        authorization: `BEARER ${process.env.GRAPHCMS_AUTH_TOKEN}`
+      }
+    }
   );
 
   const { pages } = await graphcms.request(
