@@ -9,25 +9,36 @@ GCMS Link Bio is a free alternative to Linktree, powered by GraphCMS.
 
 ## Getting Started
 
+Basically, you have two options:
+
+1. Deploy to Vercel: you will have your page published today
+2. Run in your machine: you can test this application on your computer
+
+In either cases, you must setup GraphCMS.
+
 ### Deploying to Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcastroalves%2Fgcms-link-bio&env=GRAPHCMS_AUTH_TOKEN,GRAPHCMS_ENDPOINT)
 
 1. Click on the button above to deploy this project on Vercel
 2. Connect Vercel to your GitHub account
-3. Enter the name of your repository
-4. They will ask you two environment variables: `GRAPHCMS_AUTH_TOKEN` and `GRAPHCMS_ENDPOINT`
-5. Follow the next steps to setup your GraphCMS project and API permissions
-6. After you finish it, go back to this page and enter the environment variables
+3. On **Create Git Repository** section, enter the name of your repository and then click on "Create"
+4. Skip **Create a Team** step
+5. On **Configure the Project** section, you must provide two environment variables: `GRAPHCMS_AUTH_TOKEN` and `GRAPHCMS_ENDPOINT`
+6. Keep this page openend and follow the next steps to setup GraphCMS
 
-## Creating a Project on GraphCMS
+## GraphCMS Setup
+
+You need a GraphCMS acount to create a project. They offer a Free Forever plan.
+If you already have an account, skip this step.
+### Creating a Project on GraphCMS
 
 1. [Click here](https://app.graphcms.com/create) to create a new project
 2. Enter the project name, description (optional), and select the best location for your server
 3. Select the "Free Forever" plan
 4. Skip the step to invite your team members
 
-## Setting up GraphCMS APIs
+### Setting up GraphCMS APIs
 
 1. In the Quick Start Guide, click on step 3, Make you API accessible
 2. In Content API Permissions, click on "Yes, initialize defaults"
@@ -41,14 +52,19 @@ GCMS Link Bio is a free alternative to Linktree, powered by GraphCMS.
 10. Go back to GraphCMS dashboard, click on API Access > Permanent Auth Tokens
 11. On Existing Tokens list, copy the token you've created earlier
 12. Paste the token into `GRAPHCMS_AUTH_TOKEN` field on Vercel
+13. Finally, click on "Deploy" and wait until Vercel deploy your application
 
-## Running on Your Machine
+## (Optional) Running on Your Machine
 
-1. Fork this repository
-2. Open the project in your favorite IDE
-3. Rename the `.env.example` file to `.env`
-4. Open the `.env` to edit
-5. Copy and Paste your `GRAPHCMS_ENDPOINT` and `GRAPHCMS_AUTH_TOKEN` here
+1. Login into your GitHub account
+2. Open the repository you've created earlier on Vercel
+3. Clone the repository to your machine
+4. Open the project in your favorite IDE
+5. Rename the `.env.example` file to `.env`
+6. Open the `.env` to edit
+7. Copy and Paste your `GRAPHCMS_ENDPOINT` and `GRAPHCMS_AUTH_TOKEN` here
+8. Now, open the terminal
+9. Run `npm install` and then `npm run dev`
 
 ## Running Migrations
 
