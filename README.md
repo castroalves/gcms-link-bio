@@ -51,12 +51,12 @@ If you already have an account, skip this step.
 10. Paste the token into `GRAPHCMS_AUTH_TOKEN` on your `.env` file
 11. Finally, click on "Deploy" and wait until Vercel deploy your application :)
 12. Copy and Paste your `GRAPHCMS_ENDPOINT` and `GRAPHCMS_AUTH_TOKEN` here
-13. Now, open the terminal
-14. Run `npm install` and then `npm run dev`
+
+We're almost ready! Now, let's run the migrations to setup your application on GraphCMS!
 
 ## Running Migrations
 
-Now, we will create 2 models: Page and Link. We've created a script to create them programatically for you.
+We will create 2 models: Page and Link. We've created a script to create them programatically for you.
 
 The Page model is to create your bio link page. The Link model is needed to add one or more links to your page. 
 
@@ -68,13 +68,13 @@ The Page model is to create your bio link page. The Link model is needed to add 
 
 ## Creating Your Page and adding links
 
-1. On GraphCMS dashboard, go to Content > Page
-2. Click on Create Item
-3. Enter page Title, Avatar, and Bio
-4. In the Links sections, click on "Create and add new document" and select Link
-5. Enter the link Title and URL and hit "Save and Publish"
+1. On GraphCMS dashboard, go to **Content > Page**
+2. Click on **Create Item**
+3. Enter page *Title*, *Avatar*, and *Bio*
+4. On the **Links** section, click on **Create and add new document** and click on **Link**
+5. Enter the link *Title* and *URL* and hit **Save and Publish**
 6. Add as many links as you want
-7. Finally, on New Page, click on "Save and Publish"
+7. When you're good to go, click on **Save and Publish**
 
 ## Previewing Your Page Locally
 
@@ -83,16 +83,26 @@ The Page model is to create your bio link page. The Link model is needed to add 
 3. Run `npm run dev`
 4. Open http://localhost:3000
 
-## Deploying to Vercel
+If you've done everything correctly, you'll see your new page!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcastroalves%2Fgcms-link-bio&env=GRAPHCMS_AUTH_TOKEN,GRAPHCMS_ENDPOINT)
+## 🚀 Deploying to Vercel
 
-1. Click on the button above to deploy this project on Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+1. Click on the button above to create a new deploy on Vercel
 2. Connect Vercel to your GitHub account
-3. On **Create Git Repository** section, enter the name of your repository and then click on "Create"
+3. Click on the repository you forked earlier
 4. Skip **Create a Team** step
-5. On **Configure the Project** section, you must provide two environment variables: `GRAPHCMS_AUTH_TOKEN` and `GRAPHCMS_ENDPOINT`
+5. On **Configure Project** section, enter the name of your project (optional)
+6. Click **Environment Variables** to expand it
+7. Add the following variables:
+   - `GRAPHCMS_AUTH_TOKEN`
+   - `GRAPHCMS_ENDPOINT`
 8. Copy the values from your `.env` file and paste into each field
-12. Finally, click on "Deploy" and wait until Vercel deploy your application :)
+9. Finally, click on **Deploy** and wait until Vercel deploy your application :)
+
+🚀 That's it! Now you have your own page links!
+
+Add it to your social media and share with your network!
 
 
