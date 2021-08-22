@@ -4,7 +4,7 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Image from "next/image";
 import Link from '../components/Link';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const graphcms = new GraphQLClient(
     "https://api-eu-central-1.graphcms.com/v2/cksngadri196901yu6tif7asr/master"
   );
