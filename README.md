@@ -56,10 +56,14 @@ If you already have an account, skip this step.
 
 ## Running Migrations
 
+Now, we will create 2 models: Page and Link. We've created a script to create them programatically for you.
+
+The Page model is to create your bio link page. The Link model is needed to add one or more links to your page. 
+
 1. Open your terminal
 2. Navigate to the directory you cloned the repository
 3. Run `node migrations/migration-create-schema.js`
-4. Go back to GraphCMS dashboard and click on Schema
+4. Now, go to GraphCMS dashboard and click on Schema
 5. You should see 2 new models: Page and Link
 
 ## Creating Your Page and adding links
