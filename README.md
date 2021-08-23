@@ -20,6 +20,7 @@ You should follow these steps:
 
 You need a GraphCMS acount to create a project. They offer a Free Forever plan.
 If you already have an account, skip this step.
+
 ### Creating a Project on GraphCMS
 
 1. [Click here](https://app.graphcms.com/create) to create a new project
@@ -46,8 +47,8 @@ If you already have an account, skip this step.
 5. Open the `.env` to edit
 6. Go to GraphCMS dashboard, click on **API Access > Endpoints**
 7. Copy Content API url and paste into `GRAPHCMS_ENDPOINT` on your `.env` file
-8.  Go back to GraphCMS dashboard, click on **API Access > Permanent Auth Tokens**
-9.  On Existing Tokens list, copy the token you've created earlier
+8. Go back to GraphCMS dashboard, click on **API Access > Permanent Auth Tokens**
+9. On Existing Tokens list, copy the token you've created earlier
 10. Paste the token into `GRAPHCMS_AUTH_TOKEN` on your `.env` file
 
 We're almost ready! Now, let's run the migrations to setup your application on GraphCMS!
@@ -56,7 +57,7 @@ We're almost ready! Now, let's run the migrations to setup your application on G
 
 We will create 2 models: Page and Link. We've created a script to create them programatically for you.
 
-The Page model is to create your bio link page. The Link model is needed to add one or more links to your page. 
+The Page model is to create your bio link page. The Link model is needed to add one or more links to your page.
 
 1. Open your terminal
 2. Navigate to the directory you cloned the repository
@@ -68,9 +69,9 @@ The Page model is to create your bio link page. The Link model is needed to add 
 
 1. On GraphCMS dashboard, go to **Content > Page**
 2. Click on **Create Item**
-3. Enter page *Title*, *Avatar*, and *Bio*
+3. Enter page _Title_, _Avatar_, and _Bio_
 4. On the **Links** section, click on **Create and add new document** and click on **Link**
-5. Enter the link *Title* and *URL* and hit **Save and Publish**
+5. Enter the link _Title_ and _URL_ and hit **Save and Publish**
 6. Add as many links as you want
 7. When you're good to go, click on **Save and Publish**
 
@@ -103,4 +104,11 @@ If you've done everything correctly, you'll see your new page!
 
 Add it to your social media and share with your network!
 
+## TODO
 
+- [ ] Add Loom videos for each step
+- [ ] Add checkbox to open links in a new tab
+- [ ] Add support to animate.css
+- [ ] Add support for link icons
+- [ ] Add support for link thumbnails
+- [ ] Add support for RichText in bio
