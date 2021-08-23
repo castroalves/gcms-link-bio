@@ -65,8 +65,7 @@ page.addRelationalField({
 page.addSimpleField({
     apiId: 'bio',
     displayName: 'Bio',
-    type: FieldType.String,
-    formRenderer: Renderer.MultiLine,
+    type: FieldType.Richtext,
 });
 
 page.addUnionField({
