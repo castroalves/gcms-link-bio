@@ -49,8 +49,6 @@ If you already have an account, skip this step.
 8.  Go back to GraphCMS dashboard, click on **API Access > Permanent Auth Tokens**
 9.  On Existing Tokens list, copy the token you've created earlier
 10. Paste the token into `GRAPHCMS_AUTH_TOKEN` on your `.env` file
-11. Finally, click on "Deploy" and wait until Vercel deploy your application :)
-12. Copy and Paste your `GRAPHCMS_ENDPOINT` and `GRAPHCMS_AUTH_TOKEN` here
 
 We're almost ready! Now, let's run the migrations to setup your application on GraphCMS!
 
