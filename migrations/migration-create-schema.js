@@ -1,4 +1,9 @@
-const { newMigration, FieldType, RelationType, Renderer } = require("@graphcms/management");
+const {
+  newMigration,
+  FieldType,
+  RelationType,
+  Renderer,
+} = require("@graphcms/management");
 
 const args = process.argv.slice(2);
 
@@ -13,88 +18,90 @@ const migration = newMigration({ authToken, endpoint });
 
 // create link model
 const link = migration.createModel({
-    apiId: 'Link',
-    apiIdPlural: 'Links',
-    displayName: 'Link',
+  apiId: "Link",
+  apiIdPlural: "Links",
+  displayName: "Link",
 });
 
 // add fields to link model
 link.addSimpleField({
-    apiId: 'title',
-    displayName: 'Title',
-    type: FieldType.String,
-    isRequired: true,
-    isTitle: true,
+  apiId: "title",
+  displayName: "Title",
+  type: FieldType.String,
+  isRequired: true,
+  isTitle: true,
 });
 
 link.addSimpleField({
-    apiId: 'url',
-    displayName: 'URL',
-    type: FieldType.String,
-    isRequired: true,
-    isTitle: true,
-    validations: {
-        matches: {
-            regex: '^(http://www.|https://www.|http://|https://)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$',
-        }
+  apiId: "url",
+  displayName: "URL",
+  type: FieldType.String,
+  isRequired: true,
+  isTitle: true,
+  validations: {
+    matches: {
+      regex:
+        "^(http://www.|https://www.|http://|https://)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$",
     },
+  },
 });
 
 // create page model
 const page = migration.createModel({
-    apiId: 'Page',
-    apiIdPlural: 'Pages',
-    displayName: 'Page',
+  apiId: "Page",
+  apiIdPlural: "Pages",
+  displayName: "Page",
 });
 
 // add fields to page model
 page.addSimpleField({
-    apiId: 'title',
-    displayName: 'Title',
-    type: FieldType.String,
-    isRequired: true,
-    isTitle: true,
+  apiId: "title",
+  displayName: "Title",
+  type: FieldType.String,
+  isRequired: true,
+  isTitle: true,
 });
 
 page.addRelationalField({
-    apiId: 'avatar',
-    displayName: 'Avatar',
-    model: 'Asset',
+  apiId: "avatar",
+  displayName: "Avatar",
+  model: "Asset",
 });
 
 page.addSimpleField({
-    apiId: 'bio',
-    displayName: 'Bio',
-    type: FieldType.Richtext,
+  apiId: "bio",
+  displayName: "Bio",
+  type: FieldType.String,
+  formRenderer: Renderer.MultiLine,
 });
 
 page.addUnionField({
-    apiId: 'pageLinks',
-    displayName: 'Links',
-    relationType: RelationType.OneToMany,
-    models: ['Link'],
-    reverseField: {
-        apiId: 'pageLinks',
-        displayName: 'Page',
-        isHidden: true,
-    }
+  apiId: "pageLinks",
+  displayName: "Links",
+  relationType: RelationType.OneToMany,
+  models: ["Link"],
+  reverseField: {
+    apiId: "pageLinks",
+    displayName: "Page",
+    isHidden: true,
+  },
 });
 
 // run migration
 let result = {
-    errors: 'Migration did not run',
+  errors: "Migration did not run",
 };
 
-if (args[0] === '--dry-run') {
-    console.log('[Dry Run] Running migration...');
-    result = migration.dryRun(true);
+if (args[0] === "--dry-run") {
+  console.log("[Dry Run] Running migration...");
+  result = migration.dryRun(true);
 } else {
-    console.log('Running migration...');
-    result = migration.run(true);
+  console.log("Running migration...");
+  result = migration.run(true);
 }
 
 if (result.errors) {
-    console.log(result.errors);
+  console.log(result.errors);
 } else {
-    console.log(result);
+  console.log(result);
 }
