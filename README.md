@@ -2,6 +2,10 @@
 
 GCMS Link Bio is a free alternative to Linktree, powered by GraphCMS.
 
+<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world&env=GRAPHCMS_ENDPOINT,GRAPHCMS_AUTH_TOKEN"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+
+<a href="https://app.graphcms.com/clone/7d0621683b454318949909b9fd7d0587"><img src="https://graphcms.com/button" alt="Clone project"/></a>
+
 ## Requirements
 
 - Account on GraphCMS. They offer a free forever plan for personal projects
