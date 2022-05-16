@@ -76,9 +76,9 @@ export default function Home({ pages }) {
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
         <ul className="flex flex-col justify-center items-center">
-          <li>Created by <a href="https://twitter.com/castroalves">@castroalves</a> | <a href="https://github.com/castroalves/gcms-link-bio" 
-              target="_blank"
-              rel="noopener noreferrer">Fork here</a></li>
+          <li>
+            Created by <a href="https://twitter.com/castroalves">@castroalves</a> | 
+            <a href="https://app.graphcms.com/clone/7d0621683b454318949909b9fd7d0587?name=GraphCMS%20Link%20Bio"><img src="https://graphcms.com/button" alt="Clone project"/></a></li>
           <li>
             Powered by <a
               href="https://graphcms.com?utm_source=gcms-link-bio&amp;utm_medium=footer-link&amp;utm_campaign=gcms-link-bio"
